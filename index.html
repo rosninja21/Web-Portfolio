@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosnin Web Porfolio</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="grid-bg"></div>
+<div class="glow-orb orb1"></div>
+<div class="glow-orb orb2"></div>
+
+<!-- NAV -->
+<nav style="position:relative;">
+  <div class="wrap">
+    <div class="logo">RB<span>.dev</span></div>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Work</a>
+      <a href="#experience">Exp</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects" onclick="closeMobileMenu()">Work</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-tag">Available for work</div>
+    <h1>
+     Turning low engagement   <br>into customer action
+    </h1>
+    <p class="hero-sub">
+      I’m Rosaniña Bagot, a frontend developer who designs websites that convert visitors into users.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+      <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+    </div>
+    <div class="status-bar">
+      <div class="stat-item">
+        <div class="stat-num">4<span>+</span></div>
+        <div class="stat-label">Years exp</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12<span>+</span></div>
+        <div class="stat-label">Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">99<span>%</span></div>
+        <div class="stat-label">Lighthouse score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+
+<!-- PROJECTS -->
+<section class="section reveal" id="projects">
+  <div class="wrap">
+    <div class="section-label"> Works</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-tag">Web App</div>
+        <div class="project-name">Dashboard UI</div>
+        <div class="project-desc">Real-time analytics platform with custom data visualizations and role-based access control.</div>
+        <div class="project-stack">
+          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">D3.js</span>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+      <div class="project-card">
+        <div class="project-tag">E-commerce</div>
+        <div class="project-name">Shop Platform</div>
+        <div class="project-desc">High-performance storefront with 95+ Lighthouse score, cart system, and Stripe integration.</div>
+        <div class="project-stack">
+          <span class="tag">Next.js</span><span class="tag">Prisma</span><span class="tag">Stripe</span>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+      <div class="project-card">
+        <div class="project-tag">Portfolio</div>
+        <div class="project-name">3D Experience</div>
+        <div class="project-desc">Immersive portfolio with WebGL shaders, scroll-driven animations, and custom canvas renderer.</div>
+        <div class="project-stack">
+          <span class="tag">Three.js</span><span class="tag">GSAP</span><span class="tag">GLSL</span>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+      <div class="project-card">
+        <div class="project-tag">SaaS</div>
+        <div class="project-name">Project Manager</div>
+        <div class="project-desc">Collaborative task management app with real-time updates, drag-and-drop boards, and team chat.</div>
+        <div class="project-stack">
+          <span class="tag">React</span><span class="tag">Socket.io</span><span class="tag">Zustand</span>
+        </div>
+        <div class="project-arrow">↗</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- EXPERIENCE -->
+<section class="section reveal" id="experience">
+  <div class="wrap">
+    <div class="section-label">  Journey</div>
+    <h2 class="section-title">Experience</h2>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-date">2023 — Now</div>
+        <div class="exp-content">
+          <div class="exp-role">Senior Frontend Developer</div>
+          <div class="exp-company">// Company Name</div>
+          <div class="exp-desc">Led UI architecture for the main product. Built design system from scratch, reducing dev time by 40%. Mentored junior devs.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date">2021 — 2023</div>
+        <div class="exp-content">
+          <div class="exp-role">Frontend Developer</div>
+          <div class="exp-company">// Previous Company</div>
+          <div class="exp-desc">Developed and maintained React applications. Collaborated with UX team to implement pixel-perfect interfaces.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date">2020 — 2021</div>
+        <div class="exp-content">
+          <div class="exp-role">Junior Developer</div>
+          <div class="exp-company">// Freelance</div>
+          <div class="exp-desc">Built websites for local businesses. Learned responsive design fundamentals and performance optimization.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="skills">
+  <div class="wrap">
+    <div class="section-label"> Tech Stack</div>
+    <h2 class="section-title">Technologies</h2>
+    <div class="skills-grid">
+      <div class="skill-chip"><span class="skill-dot"></span><span class="skill-name">React / Next.js</span><span class="skill-level">PRO</span></div>
+      <div class="skill-chip"><span class="skill-dot"></span><span class="skill-name">TypeScript</span><span class="skill-level">PRO</span></div>
+      <div class="skill-chip"><span class="skill-dot"></span><span class="skill-name">Tailwind CSS</span><span class="skill-level">PRO</span></div>
+      <div class="skill-chip"><span class="skill-dot"></span><span class="skill-name">JavaScript ES6+</span><span class="skill-level">PRO</span></div>
+      <div class="skill-chip"><span class="skill-dot" style="background:var(--accent2)"></span><span class="skill-name">Node.js</span><span class="skill-level">MID</span></div>
+      <div class="skill-chip"><span class="skill-dot" style="background:var(--accent2)"></span><span class="skill-name">GraphQL</span><span class="skill-level">MID</span></div>
+      <div class="skill-chip"><span class="skill-dot" style="background:var(--accent2)"></span><span class="skill-name">Framer Motion</span><span class="skill-level">MID</span></div>
+      <div class="skill-chip"><span class="skill-dot" style="background:var(--accent2)"></span><span class="skill-name">GSAP</span><span class="skill-level">MID</span></div>
+      <div class="skill-chip"><span class="skill-dot" style="background:#555"></span><span class="skill-name">Three.js</span><span class="skill-level">LRN</span></div>
+      <div class="skill-chip"><span class="skill-dot" style="background:#555"></span><span class="skill-name">WebGL / GLSL</span><span class="skill-level">LRN</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section reveal" id="contact">
+  <div class="wrap">
+    <div class="section-label">Contact</div>
+    <div class="contact-box">
+      <h2>Let's Build Together</h2>
+      <p>// Open to freelance &amp; full-time opportunities</p>
+      <button class="btn-primary" style="margin-bottom: 32px;">hello@yourname.dev</button>
+      <div class="contact-links">
+        <a class="contact-link" href="#">GitHub</a>
+        <a class="contact-link" href="#">LinkedIn</a>
+        <a class="contact-link" href="#">Twitter</a>
+        <a class="contact-link" href="#">Resume PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Your Name <span class="blink">_</span></span>
+    <span style="color: var(--accent);">Designed &amp; Built by you</span>
+  </footer>
+</div>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobileMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => io.observe(r));
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(s => navIO.observe(s));
+</script>
+</body>
+</html>
