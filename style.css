@@ -111,6 +111,20 @@
     font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
     border: none; padding: 14px 28px; cursor: pointer; transition: all 0.2s;
   }
+  .main-wrapper{
+    display: flex;
+    flex-direction: row;
+
+     max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  }
+  
+
+  
+  
+
+  
   .btn-primary:hover { background: #00ffcc; transform: translateY(-2px); }
   .btn-ghost {
     background: transparent; color: var(--text); font-family: 'Space Mono', monospace;

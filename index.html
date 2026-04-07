@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style.css">
 
 
+
 </head>
 <body>
 
@@ -22,7 +23,7 @@
     <div class="nav-links">
       <a href="#skills">Skills</a>
       <a href="#projects">Work</a>
-      <a href="#experience">Exp</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -38,10 +39,11 @@
 </nav>
 
 <section class="hero" id="hero">
-  <div class="wrap">
+  <div class="main-wrapper">
+      <div class="wrap">
     <div class="hero-tag">Available for work</div>
     <h1>
-     Turning low engagement   <br>into customer action
+     Turning low engagement  <br>into a customer action
     </h1>
     <p class="hero-sub">
       I’m Rosaniña Bagot, a frontend developer who designs websites that convert visitors into users.
@@ -50,7 +52,14 @@
       <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
       <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
     </div>
-    <div class="status-bar">
+    </div>
+
+    <div class="img-container">
+      <img src=".//assets/629248981_2453106021777400_941272540976817073_n__1_-removebg-preview.png" alt="">
+    </div>
+
+   
+    <!-- <div class="status-bar">
       <div class="stat-item">
         <div class="stat-num">4<span>+</span></div>
         <div class="stat-label">Years exp</div>
@@ -67,8 +76,9 @@
         <div class="stat-num">99<span>%</span></div>
         <div class="stat-label">Lighthouse score</div>
       </div>
-    </div>
+    </div> -->
   </div>
+  
 </section>
 
 <!-- SKILLS -->
@@ -180,8 +190,8 @@
     <div class="section-label">Contact</div>
     <div class="contact-box">
       <h2>Let's Build Together</h2>
-      <p>// Open to freelance &amp; full-time opportunities</p>
-      <button class="btn-primary" style="margin-bottom: 32px;">hello@yourname.dev</button>
+      <p> Open to freelance &amp; full-time opportunities</p>
+      <button class="btn-primary" style="margin-bottom: 32px;">ryuichinina@gmail.com</button>
       <div class="contact-links">
         <a class="contact-link" href="#">GitHub</a>
         <a class="contact-link" href="#">LinkedIn</a>
@@ -194,44 +204,12 @@
 
 <div class="wrap">
   <footer>
-    <span>© 2026 Your Name <span class="blink">_</span></span>
-    <span style="color: var(--accent);">Designed &amp; Built by you</span>
+    <span>© 2026 Rosnin Bagot<span class="blink">_</span></span>
+    <span style="color: var(--accent);">Designed &amp; Built by Rosnin</span>
   </footer>
 </div>
 
-<script>
-  // Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  function closeMobileMenu() {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  }
 
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => io.observe(r));
-
-  // Active nav highlight
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const navIO = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(a => {
-          a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-        });
-      }
-    });
-  }, { threshold: 0.5 });
-  sections.forEach(s => navIO.observe(s));
-</script>
 </body>
+<script src="script.js"></script>
 </html>
