@@ -33,3 +33,20 @@
     });
   }, { threshold: 0.5 });
   sections.forEach(s => navIO.observe(s));
+
+  function loadImage(input, areaId) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const area = document.getElementById(areaId);
+    const idx = areaId.split('-')[1];
+    const img = document.getElementById('img-' + idx);
+    const placeholder = area.querySelector('.img-placeholder');
+    img.src = e.target.result;
+    img.classList.add('loaded');
+    placeholder.style.display = 'none';
+    area.classList.add('has-image');
+  };
+  reader.readAsDataURL(file);
+}
