@@ -200,6 +200,23 @@
 }
 
 
+.explore-btn {
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #0a0414;
+  background: var(--accent3);
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.explore-btn:hover {
+  background: #ffd95a;
+  transform: translateY(-2px);
+}
+
 
   
 .btn-primary:hover { background: #ffd95a; transform: translateY(-2px); }
@@ -257,7 +274,12 @@
     background: var(--accent); transition: height 0.3s;
   }
 
-.project-card:hover::before { background: var(--accent3); }
+.project-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0;
+  background: var(--accent3); transition: height 0.3s;
+}
+
+.project-card:hover::before { height: 100%; }
 .project-card:hover .project-arrow { color: var(--accent3); transform: translate(4px, -4px); }
 
   .project-tag { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--accent3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
