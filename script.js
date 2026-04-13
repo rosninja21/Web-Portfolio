@@ -60,6 +60,8 @@
       window.location.href ="mailto:ryuichinina@gmail.com"
     } )
 
+    
+
  
 
   const ghLink=document.querySelector(".github-lnk");
